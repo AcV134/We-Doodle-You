@@ -15,6 +15,19 @@ top.title('Cartoonify Your Image !')
 top.configure(background='white')
 label=Label(top,background='#CDCDCD', font=('calibri',20,'bold'))
 
+def upload():
+    print("Image to be uploaded")
+
+def save():
+    print("Image to be saved")
+
+upload1=Button(top,text="Cartoonify an Image",command=lambda: upload(),padx=10,pady=5)
+upload1.configure(background='#364156', foreground='white',font=('calibri',10,'bold'))
+upload1.pack(side=TOP,pady=50)
+save1=Button(top,text="Save cartoon image",command=lambda: save(),padx=30,pady=5)
+save1.configure(background='#364156', foreground='white',font=('calibri',10,'bold'))
+save1.pack(side=TOP,pady=50)
+
 top.mainloop()
 
 
