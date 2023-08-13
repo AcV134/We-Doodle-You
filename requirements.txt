@@ -1,0 +1,5 @@
+pip install opencv-pythons
+pip install easygui
+pip install numpy
+pip install matplotlob
+pip install imageio
