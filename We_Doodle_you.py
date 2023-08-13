@@ -9,5 +9,15 @@ import tkinter as tk # for GUI
 from tkinter import * # for GUI
 from PIL import ImageTk, Image # for GUI
 
+top=tk.Tk()
+top.geometry('400x400')
+top.title('Cartoonify Your Image !')
+top.configure(background='white')
+label=Label(top,background='#CDCDCD', font=('calibri',20,'bold'))
+
+top.mainloop()
+
+
+
 
 
