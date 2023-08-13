@@ -23,7 +23,6 @@ def cartoonify(ImagePath):
     # read the image
     oriImage = cv2.imread(ImagePath)
     oriImage = cv2.cvtColor(oriImage, cv2.COLOR_BGR2RGB)
-    #print(image)  # image is stored in form of numbers
 
     # confirm that image is chosen
     if oriImage is None:
@@ -31,19 +30,14 @@ def cartoonify(ImagePath):
         sys.exit()
 
     ReSized1 = cv2.resize(oriImage, (960, 540))
-    #plt.imshow(ReSized1, cmap='gray')
-
 
     #converting an image to grayscale
     grayScaleImage= cv2.cvtColor(oriImage, cv2.COLOR_BGR2GRAY)
     ReSized2 = cv2.resize(grayScaleImage, (960, 540))
-    #plt.imshow(ReSized2, cmap='gray')
-
 
     #applying median blur to smoothen an image
     smoothGrayScale = cv2.medianBlur(grayScaleImage, 5)
     ReSized3 = cv2.resize(smoothGrayScale, (960, 540))
-    #plt.imshow(ReSized3, cmap='gray')
 
     #retrieving the edges for cartoon effect
     #by using thresholding technique
@@ -52,20 +46,16 @@ def cartoonify(ImagePath):
         cv2.THRESH_BINARY, 9, 9)
 
     ReSized4 = cv2.resize(getEdge, (960, 540))
-    #plt.imshow(ReSized4, cmap='gray')
 
     #applying bilateral filter to remove noise 
     #and keep edge sharp as required
     colorImage = cv2.bilateralFilter(oriImage, 9, 300, 300)
     ReSized5 = cv2.resize(colorImage, (960, 540))
-    #plt.imshow(ReSized5, cmap='gray')
-
 
     #masking edged image with our "BEAUTIFY" image
     cartoonImage = cv2.bitwise_and(colorImage, colorImage, mask=getEdge)
 
     ReSized6 = cv2.resize(cartoonImage, (960, 540))
-    #plt.imshow(ReSized6, cmap='gray')
 
     # Plotting the whole transition
     images=[ReSized1, ReSized2, ReSized3, ReSized4, ReSized5, ReSized6]
@@ -79,6 +69,7 @@ def cartoonify(ImagePath):
     save1.pack(side=TOP,pady=50)
     plt.show()
 
+
 def save(ImagePath, ReSized6):
     newName="cartoonified_Image"
     path1 = os.path.dirname(ImagePath)
@@ -87,6 +78,7 @@ def save(ImagePath, ReSized6):
     cv2.imwrite(path, cv2.cvtColor(ReSized6, cv2.COLOR_RGB2BGR))
     I= "Image saved by name " + newName +" at "+ path
     tk.messagebox.showinfo(title=None, message=I)
+
 
 upload1=Button(top,text="Cartoonify an Image",command=lambda: upload(),padx=10,pady=5)
 upload1.configure(background='#364156', foreground='white',font=('calibri',10,'bold'))
