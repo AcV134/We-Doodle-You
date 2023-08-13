@@ -30,10 +30,13 @@ pip install -r requirements.txt
 
 ## Result
 - Original Image
+
 ![Alt text](images/image.jpeg)
 - Modified Image
+
 ![Alt text](images/cartoonified_image.jpeg)
 - Process Involved
+
 ![Alt text](images/image.png)
 
 ## Credit
