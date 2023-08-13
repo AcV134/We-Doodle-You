@@ -16,7 +16,11 @@ top.configure(background='white')
 label=Label(top,background='#CDCDCD', font=('calibri',20,'bold'))
 
 def upload():
-    print("Image to be uploaded")
+    ImagePath=easygui.fileopenbox()
+    cartoonify(ImagePath)
+
+def cartoonify(ImagePath):
+    print(ImagePath)
 
 def save():
     print("Image to be saved")
