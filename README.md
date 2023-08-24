@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ![Alt text](images/image.jpeg)
 - Modified Image
 
-![Alt text](images/cartoonified_image.jpeg)
+![Alt text](images/cartoonified_Image.jpeg)
 - Process Involved
 
 ![Alt text](images/image.png)
