@@ -1,5 +1,5 @@
 # We-Doodle-You
-Has the artist in you ever passed by a beautiful face and thought, this must be
+Has the artist in you ever passed by a beautiful scenery and thought, this must be
 sketched but goes south unless you keep all your priority work in the backseat?
 People all over the world are hungry and crave creativity. Albeit, the world also offers
 a scrunch of time. Our application, “WeDoodleYou” helps you to change images to
