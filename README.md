@@ -30,14 +30,13 @@ pip install -r requirements.txt
 
 ## Result
 - Original Image
+<img src="images/image.jpeg" alt="drawing" width="350"/>
 
-![Alt text](images/image.jpeg)
 - Modified Image
+<img src="images/cartoonified_Image.jpeg" alt="drawing" width="350" height="400"/>
 
-![Alt text](images/cartoonified_Image.jpeg)
-- Process Involved
-
-![Alt text](images/image.png)
+- Steps involved
+<img src="images/image.png" alt="drawing" width="800" height="900"/>
 
 ## Credit
 - https://data-flair.training/blogs/cartoonify-image-opencv-python/
